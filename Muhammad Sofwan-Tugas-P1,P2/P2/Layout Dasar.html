@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Layout Dasar.css">
+    <title>Layout Dasar CSS</title>
+</head>
+<body>
+    <h1>Belajar Layout Dasar CSS</h1>
+
+    <!--Display Property-->
+    <div class="section">
+        <h2>Display Project</h2>
+
+        <h3>Block Elemen</h3>
+        <div class="display-block">Div 1 (Block)</div>
+        <div class="display-block">Div 2 (Block)</div>
+        <p>Block elemnts mengambil full width dan membuat Line Break,</p>
+
+        <h3>Inline Elements</h3>
+        <span class="display-inline">Span 1 (Inline)</span>
+        <span class="display-inline">Span 2 (Inline)</span>
+        <span class="display-inline">Span 3 (Inline)</span>
+        <p>Inline elements hanya mengambil width sesuai content.</p>
+
+        <h3>Inline Block Elements</h3>
+        <span class="display-inline-block">Box 1</span>
+        <span class="display-inline-block">Box 2</span>
+        <span class="display-inline-block">Box 3</span>
+        <p>Inline-Block mengambungkan sifat inline dan block</p>
+
+        <h3>Node (hidden)</h3>
+        <div class="display-none">Elements ini disembunyikan</div>
+        <p>
+            Elements dengan display: None tidak terlihat dan tidak ditampilkan di ruang
+        </p>
+    </div>
+
+    <!--Position Property-->
+    <div class="section">
+        <h2>Position Property</h2>
+
+        <h3>Static (Default)</h3>
+        <div class="position-container">
+            <div class="position-static">Position Static</div>
+        </div>
+
+        <h3>Relative</h3>
+        <div class="position-container">
+            <div class="position-relative">
+                position Relative (bergeser dari posisi asli)
+            </div>
+        </div>
+
+        <h3>Absolute</h3>
+        <div class="position-container-relative-parent">
+            <div class="position-absolute">Position Absolute </div>
+            <p>Elemen dengan position absolute akan keluar dari normal flow</p>
+        </div>
+
+        <h3>Fixed</h3>
+        <div class="position-fixed">
+            position Fixed (scroll untuk melihat efek)
+        </div>
+        <p>Elemnt dengan position fixed akan tetap berada di tempat scroll</p>
+
+        <h3>Stick</h3>
+        <div class="stick-container">
+            <div class="position-stick">
+                position Stick (Scroll Container ini)
+            </div>
+            <div class="scroll-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam delectus corporis aliquam quas sint exercitationem odit suscipit quos alias accusantium doloribus deserunt consequatur, ullam nihil eos a nam vero cupiditate?</p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores optio tempore soluta ea perferendis itaque voluptatem, architecto cum quaerat officia molestiae adipisci iure eos vel repellat voluptatum. Expedita, fuga alias?
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur, molestiae fugit nesciunt. </p>
+                <p>adipisicing elit. Doloribus dolorem enim mollitia illo </p>
+                <p>reprehenderit nemo aspernatur praesentium id cumque minima omnis animi neque, </p>
+                <p>ommodi quos eveniet beatae.</p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero saepe animi nulla optio. Qui molestias nobis, quaerat soluta ut dolores veniam nulla asperiores numquam debitis placeat, exercitationem doloremque quidem eaque?
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Float Propert-->
+    <div class="section">
+        <h2>Float Property</h2>
+
+        <h3>Float Left</h3>
+        <div class="float-container">
+            <div class="float-left">Float Left</div>
+            <p>
+                Text ini akan mengalir di sebelah kanan elemen yang di float left.
+                float memungkingkan elemen yang mengalir di sekitarnya. 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, reprehenderit odio aliquid eligendi voluptates cum culpa aperiam, unde vitae molestiae alias asperiores dolorum quas impedit voluptas sunt aspernatur obcaecati voluptate.
+            </p>
+        </div>
+
+        <h3>Float Right</h3>
+        <div class="float-contaianer">
+            <div class="float-right">Float Right</div>
+            <p>
+                Text ini akan mengalir di sebelah kiri elemen yang di float right.
+                Float  adalah cara tradisional untuk membuat layout sebelum adanya flexbox dan grid.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores sequi velit tempora, vitae, perferendis aperiam facilis magni repellendus quo incidunt dolor? Veniam labore neque fugit dolorum incidunt? Ducimus, iste vero?
+            </p>
+        </div>
+
+        <h3>Clear Float</h3>
+        <div class="float-container">
+            <div class="float-left">Float Left 1</div>
+            <div class="float-left">Float Left 2</div>
+            <div class="float-float">Elemen ini menggunakan Clear: Both</div>
+            <p>Clear digunakan untuk memberikan efek float.</p>
+        </div>
+    </div>
+
+    <!--Z-Index-->
+    <div class="section">
+        <h2>Z-Index Property</h2>
+        <div class="z-index-container">
+            <div class="z-index-1">Z-Index: 1</div>
+            <div class="z-index-2">Z-Index: 2</div>
+            <div class="z-index-3">Z-Index: 3</div>
+        </div>
+        <p>Z-index mengatur urutan layar element. Nilai lebih besar = diatas.</p>
+    </div>
+
+    <!--Overflow-->
+    <div class="section">
+        <h2>Overflow Property</h2>
+
+        <h3>Overflow Visible (Default)</h3>
+        <div class="overflow-container overflow-visible">
+            <div class="overflow-content">
+                content yang melebihi ukuran container akan dipotong dengan overflow hidden
+            </div>
+        </div>
+
+        <h3>Overflow Scroll</h3>
+        <div class="overflow-container overflow-scroll">
+            <div class="overflow-content">
+                content yang melebihi ukuran container dapat di-scroll dengan overflow: Scroll. Scrollbar akan selalu muncul
+            </div>
+        </div>
+
+        <h3>Overflow Auto</h3>
+        <div class="overflow-container overflow-auto">
+            <div class="overflow-content">
+                content yang melebihi ukuran container dapat di-scroll dengan overflow: Auto. Scrollbar akan muncul jika diperlukan
+            </div>
+        </div>
+    </div>
+
+    <!--Flexbox Introduction-->
+    <div class="section">
+        <h2>Flexbox (modern layout)</h2>
+
+        <h3>Basic Flexbox</h3>
+        <div class="flex-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>Flex Dicertion</h3>
+        <div class="flex-container flex-column">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>Justify Content</h3>
+        <div class="flex-container justify-center">
+            <div class="flex-item">Counter</div>
+            <div class="flex-item">Aligned</div>
+        </div>
+
+        <div class="flex-container justify-space-between">
+            <div class="flex-item">Space</div>
+            <div class="flex-item">Between</div>
+        </div>
+    </div>
+    
+    <!--Pratical Layout Examples-->
+    <div class="section">
+        <h2>Contoh Layout Praktis</h2>
+
+        <h3>Two Column Layout</h3>
+        <div class="two-column">
+            <div class="column-left">
+                <h4>Kolom Kanan</h4>
+                <p>Content untuk kolom kanan</p>
+            </div>
+        </div>
+
+        <h3>Three Column Layout</h3>
+        <div class="three-column">
+            <div class="column">
+                <h4>Kolom 1</h4>
+                <p>Content kolom pertama</p>
+            </div>
+            <div class="column">
+                <h4>Kolom 2</h4>
+                <p>Content kolom 2</p>
+            </div>
+            <div class="column">
+                <h4>Kolom 3</h4>
+                <p>Content kolom 3</p>
+            </div>
+        </div>
+
+        <h3>Header-Content-Footer Layout</h3>
+        <div class="page-layout">
+            <div class="page-header">
+                <h4>Header</h4>
+            </div>
+            <div class="page-content">
+                <h4>Content Area</h4>
+                <p>Main Content Goes here.</p>
+            </div>
+            <div class="page-footer">
+                <h4>Footer</h4>
+            </div>
+        </div>
+    </div>
+
+    <!--Content to test fixed postioning-->
+    <div class="section">
+        <h2>Additional Content</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam delectus corporis aliquam quas sint exercitationem odit suscipit quos alias accusantium doloribus deserunt consequatur, ullam nihil eos a nam vero cupiditate?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores optio tempore soluta ea perferendis itaque voluptatem, architecto cum quaerat officia molestiae adipisci iure eos vel repellat voluptatum. Expedita, fuga alias?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur, molestiae fugit nesciunt. </p>
+        <p>adipisicing elit. Doloribus dolorem enim mollitia illo </p>
+        <p>reprehenderit nemo aspernatur praesentium id cumque minima omnis animi neque, </p>
+        <p>ommodi quos eveniet beatae.</p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero saepe animi nulla optio. Qui molestias nobis, quaerat soluta ut dolores veniam nulla asperiores numquam debitis placeat, exercitationem doloremque quidem eaque?
+        </p>
+    </div>
+</body>
+</html>
