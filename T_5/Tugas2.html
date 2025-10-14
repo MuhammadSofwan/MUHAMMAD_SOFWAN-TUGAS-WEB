@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pengulangan Berdasarkan Input</title>
+</head>
+<body>
+  <main class="card" role="main">
+    <h1>Pengulangan Berdasarkan Input</h1>
+    <p class="lead">Masukkan jumlah pengulangan, lalu tekan tombol untuk menampilkan teks sebanyak jumlah tersebut.</p>
+
+    <div class="row">
+      <label for="count" style="display:none">Jumlah</label>
+      <input id="count" type="number" min="0" placeholder="Masukkan jumlah (contoh: 10)" />
+      <button id="run">Tampilkan</button>
+    </div>
+
+    <div class="row">
+      <label for="message" style="display:none">Pesan</label>
+      <input id="message" type="text" placeholder="Pesan yang ingin ditampilkan (opsional)" />
+    </div>
+
+    <div id="err" class="error" aria-live="polite" style="display:none"></div>
+
+    <div id="out" class="output" aria-live="polite"></div>
+
+  </main>
+
+  <script>
+    (function(){
+      const countInput = document.getElementById('count');
+      const msgInput = document.getElementById('message');
+      const runBtn = document.getElementById('run');
+      const out = document.getElementById('out');
+      const err = document.getElementById('err');
+
+      function showError(text){
+        err.textContent = text;
+        err.style.display = text ? 'block' : 'none';
+      }
+
+      function run(){
+        showError('');
+        out.textContent = ''; 
+        const raw = countInput.value;
+        const n = parseInt(raw, 10);
+
+        if (isNaN(n)){
+          showError('Masukkan angka valid untuk jumlah pengulangan.');
+          return;
+        }
+        if (n < 0){
+          showError('Masukkan angka nol atau positif.');
+          return;
+        }
+        const message = msgInput.value.trim() || 'Ini adalah pengulangan ke-{i}';
+
+        const lines = [];
+        for (let i = 1; i <= n; i++){
+          lines.push(message.replace(/{i}/g, i).replace(/{index}/g, i));
+        }
+
+        out.textContent = lines.join('\n') || '(Tidak ada output — jumlah = 0)';
+      }
+
+      runBtn.addEventListener('click', run);
+      countInput.addEventListener('keydown', function(e){
+        if (e.key === 'Enter') run();
+      });
+      msgInput.addEventListener('keydown', function(e){
+        if (e.key === 'Enter') run();
+      });
+
+      msgInput.placeholder = 'Pesan (gunakan {i} sebagai nomor, contoh: "Pengulangan ke-{i}")';
+    })();
+  </script>
+</body>
+</html>

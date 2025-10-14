@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Seleksi Switch</title>
+        <script type="text/javascript">
+            function test () {
+                val1=window.prompt("Masukkan nilai (1-5): ");
+                switch (val1) {
+                    case "1": alert("Anda memasukkan nilai 1"); break;
+                    case "2": alert("Anda memasukkan nilai 2"); break;
+                    case "3": alert("Anda memasukkan nilai 3"); break;
+                    case "4": alert("Anda memasukkan nilai 4"); break;
+                    case "5": alert("Anda memasukkan nilai 5"); break;
+                    default: alert("Bilangan lainnya");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" name="button1" value="switch" onclick="test()">
+    </body>
+</html>

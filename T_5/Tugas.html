@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawaban Praktikum</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Soal 1: Seleksi Nilai</h2>
+        <p>Masukkan nilai (0-100) untuk melihat hasil kelulusan.</p>
+        <input type="number" id="inputNilai" placeholder="Masukkan nilai...">
+        <button onclick="cekNilai()">Cek Hasil</button>
+        <div id="hasilNilai"></div>
+    </div>
+
+    <div class="container">
+        <h2>Soal 2: Perulangan Tulisan</h2>
+        <p>Masukkan jumlah perulangan yang diinginkan.</p>
+        <input type="number" id="inputJumlah" placeholder="Masukkan jumlah...">
+        <button onclick="buatPerulangan()">Tampilkan</button>
+        <div id="hasilPerulangan"></div>
+    </div>
+
+    <script>
+        function cekNilai() {
+            let nilai = parseInt(document.getElementById("inputNilai").value);
+            
+            let huruf = "";
+            let keterangan = "";
+            if (nilai >= 80 && nilai <= 100) {
+                huruf = "A";
+                keterangan = "Lulus";
+            } else if (nilai >= 75 && nilai <= 79) {
+                huruf = "AB";
+                keterangan = "Lulus";
+            } else if (nilai >= 70 && nilai <= 74) {
+                huruf = "B";
+                keterangan = "Lulus";
+            } else if (nilai >= 65 && nilai <= 69) {
+                huruf = "BC";
+                keterangan = "Lulus";
+            } else if (nilai >= 60 && nilai <= 64) {
+                huruf = "C";
+                keterangan = "Lulus";
+            } else if (nilai >= 50 && nilai <= 59) {
+                huruf = "D";
+                keterangan = "Tidak Lulus";
+            } else if (nilai >= 0 && nilai <= 49) {
+                huruf = "E";
+                keterangan = "Tidak Lulus";
+            } else {
+                huruf = "Tidak Valid";
+                keterangan = "Silakan masukkan nilai antara 0 - 100.";
+            }
+
+            document.getElementById("hasilNilai").innerHTML = 
+                `Huruf: ${huruf}<br>Keterangan: ${keterangan}`;
+        }
+
+        function buatPerulangan() {
+            let jumlah = parseInt(document.getElementById("inputJumlah").value);
+            
+            let output = "";
+            let wadahHasil = document.getElementById("hasilPerulangan");
+            
+            wadahHasil.innerHTML = "";
+
+            if (jumlah > 0) {
+                 for (let i = 1; i <= jumlah; i++) {
+                    output += `Ini adalah tulisan ke-${i}<br>`; 
+                }
+            } else {
+                output = "Masukkan jumlah yang valid (lebih dari 0).";
+            }
+
+            wadahHasil.innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>
