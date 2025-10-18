@@ -1,0 +1,63 @@
+/* Wrapper untuk menu */
+#wrapper {
+    width: 600px;
+    margin: 50px auto;
+}
+
+/* Style umum menu */
+#menu ul {
+    font-family: Arial, Verdana;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Item utama */
+#menu ul li {
+    display: block;
+    position: relative;
+    float: left;
+}
+
+/* Sub-menu tersembunyi */
+#menu li ul {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 2;
+}
+
+/* Gaya link menu */
+#menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    background: #000;
+    white-space: nowrap;
+    position: relative;
+    z-index: 3;
+}
+
+/* Efek hover pada menu utama */
+#menu ul li a:hover {
+    background: #666;
+}
+
+/* Tampilkan submenu saat hover */
+#menu li:hover ul {
+    display: block;
+}
+
+/* Submenu item */
+#menu li:hover li {
+    float: none;
+    font-size: 12px;
+}
+
+/* Warna saat submenu dihover */
+#menu li:hover li a:hover {
+    background: #3b3b3b;
+}
